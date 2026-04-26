@@ -21,8 +21,8 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // 4. Routes - Yahan maine rasta sahi kar diya hai
 app.use('/api/auth', require('./routes/authRoutes'));
-app.use('/api/categories', require('./routes/category')); // Ab ye error nahi dega
-app.use('/api/products', require('./routes/product'));   // Product ka rasta bhi set hai
+app.use('/api/categories/all', require('./routes/category')); // Ab ye error nahi dega
+app.use('/api/products/all', require('./routes/product'));   // Product ka rasta bhi set hai
 
 app.get('/', (req, res) => {
     res.send('Server aur Database dono fit hain!');
